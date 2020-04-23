@@ -16,7 +16,7 @@ const router = new Router();
 router.get('/book', async (ctx, next) => {
     let query = ctx.request.query;
     let {q, fields} = query;
-    let url = `https://api.douban.com/v2/book/search?q=${q}&fields=${fields}&count=10`;
+    let url = `https://douban.uieee.com/v2/book/search?q=${q}&fields=${fields}&count=10`;
     let res = await util.get(url);
     ctx.response.body = res;
 });
